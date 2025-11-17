@@ -37,6 +37,7 @@ export default function ConsultaPage() {
     "Paciente VIH con CD4 150, ¿qué vacunas necesita?",
     "¿Cómo convenzo a unos padres de vacunar contra Meningococo B si se resisten?",
     "Candidato a trasplante renal, ¿cuándo vacunar Herpes Zóster?",
+    "Paciente de 76 años, ¿qué vacunas necesita?",
   ];
 
   return (
