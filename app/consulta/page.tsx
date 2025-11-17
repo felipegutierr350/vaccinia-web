@@ -41,7 +41,6 @@ export default function ConsultaPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Navbar */}
       <nav className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
@@ -54,6 +53,9 @@ export default function ConsultaPage() {
             </Link>
             <Link href="/tips">
               <Button variant="ghost">Tips</Button>
+            </Link>
+            <Link href="/mipres">
+              <Button variant="ghost">MIPRES</Button>
             </Link>
           </div>
         </div>
@@ -68,7 +70,6 @@ export default function ConsultaPage() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-6">
-          {/* Área de consulta */}
           <div className="lg:col-span-2 space-y-6">
             <Card>
               <CardHeader>
@@ -111,7 +112,6 @@ export default function ConsultaPage() {
               </CardContent>
             </Card>
 
-            {/* Respuesta */}
             {response && (
               <Card>
                 <CardHeader>
@@ -147,7 +147,6 @@ export default function ConsultaPage() {
             )}
           </div>
 
-          {/* Sidebar con plantillas */}
           <div className="space-y-6">
             <Card>
               <CardHeader>

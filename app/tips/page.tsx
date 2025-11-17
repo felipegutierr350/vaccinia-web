@@ -47,6 +47,7 @@ export default function TipsPage() {
           <div className="flex gap-4">
             <Link href="/"><Button variant="ghost">Inicio</Button></Link>
             <Link href="/consulta"><Button variant="ghost">Consulta</Button></Link>
+            <Link href="/mipres"><Button variant="ghost">MIPRES</Button></Link>
           </div>
         </div>
       </nav>
