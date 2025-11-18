@@ -10,7 +10,6 @@ import { Loader2, Sparkles, FileText, AlertCircle } from "lucide-react";
 export default function ConsultaPage() {
   const [question, setQuestion] = useState("");
   const [loading, setLoading] = useState(false);
-  const [loadingStage, setLoadingStage] = useState("");
   const [response, setResponse] = useState<any>(null);
   const [error, setError] = useState("");
 
@@ -28,23 +27,18 @@ export default function ConsultaPage() {
     setLoading(true);
     setError("");
     setResponse(null);
-    
-    setLoadingStage("Analizando tu pregunta...");
-    setTimeout(() => setLoadingStage("Buscando en 1,171 documentos médicos..."), 2000);
-    setTimeout(() => setLoadingStage("Generando recomendación personalizada..."), 8000);
 
     try {
       const data = await vaccineAPI.chat({ question });
-      setLoadingStage("¡Listo!");
       setResponse(data);
     } catch (err) {
       setError("Error al conectar con el servicio. Intenta de nuevo.");
       console.error(err);
     } finally {
       setLoading(false);
-      setLoadingStage("");
     }
   };
+
 
   const renderSource = (source: any, idx: number) => {
     if (typeof source === 'string') {
@@ -96,7 +90,6 @@ export default function ConsultaPage() {
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
                   className="min-h-[120px] resize-none"
-                  disabled={loading}
                 />
                 <Button
                   onClick={handleSubmit}
@@ -118,29 +111,6 @@ export default function ConsultaPage() {
                 </Button>
               </CardContent>
             </Card>
-
-            {loading && (
-              <Card className="border-blue-200 bg-blue-50">
-                <CardContent className="pt-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-center">
-                      <Loader2 className="h-8 w-8 animate-spin text-blue-600" />
-                    </div>
-                    <p className="text-center text-blue-900 font-medium">
-                      {loadingStage}
-                    </p>
-                    <div className="flex justify-center gap-2">
-                      <div className="h-2 w-2 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0ms'}}></div>
-                      <div className="h-2 w-2 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '150ms'}}></div>
-                      <div className="h-2 w-2 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '300ms'}}></div>
-                    </div>
-                    <p className="text-center text-sm text-blue-700">
-                      Esto puede tomar 15-30 segundos mientras analizamos literatura médica especializada
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
 
             {response && (
               <Card>
@@ -221,7 +191,6 @@ export default function ConsultaPage() {
                     variant="outline"
                     className="w-full h-auto py-3 px-4 text-left whitespace-normal hover:bg-blue-50 hover:border-blue-300 transition-colors"
                     onClick={() => setQuestion(template)}
-                    disabled={loading}
                   >
                     <span className="text-sm leading-relaxed break-words">
                       {template}
