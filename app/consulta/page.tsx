@@ -52,7 +52,6 @@ export default function ConsultaPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Columna izquierda - Consulta */}
           <div className="lg:col-span-2 space-y-6">
             <Card>
               <CardHeader>
@@ -89,7 +88,6 @@ export default function ConsultaPage() {
               </CardContent>
             </Card>
 
-            {/* Respuesta */}
             {response && (
               <Card>
                 <CardHeader>
@@ -143,7 +141,6 @@ export default function ConsultaPage() {
               </Card>
             )}
 
-            {/* Card de consejos */}
             <Card className="bg-blue-50 border-blue-200">
               <CardContent className="pt-6">
                 <h3 className="font-semibold text-blue-900 mb-2">
@@ -159,7 +156,6 @@ export default function ConsultaPage() {
             </Card>
           </div>
 
-          {/* Columna derecha - Plantillas */}
           <div className="lg:col-span-1">
             <Card className="sticky top-6">
               <CardHeader>
