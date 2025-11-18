@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { vaccineAPI } from "@/lib/api";
-import { Loader2, Sparkles, FileText, AlertCircle, Search, Brain, CheckCircle } from "lucide-react";
+import { Loader2, Sparkles, FileText, AlertCircle } from "lucide-react";
 
 export default function ConsultaPage() {
   const [question, setQuestion] = useState("");
@@ -29,7 +29,6 @@ export default function ConsultaPage() {
     setError("");
     setResponse(null);
     
-    // Simular stages para mejor UX
     setLoadingStage("Analizando tu pregunta...");
     setTimeout(() => setLoadingStage("Buscando en 1,171 documentos médicos..."), 2000);
     setTimeout(() => setLoadingStage("Generando recomendación personalizada..."), 8000);
@@ -120,7 +119,6 @@ export default function ConsultaPage() {
               </CardContent>
             </Card>
 
-            {/* Loading stages - NUEVO */}
             {loading && (
               <Card className="border-blue-200 bg-blue-50">
                 <CardContent className="pt-6">
