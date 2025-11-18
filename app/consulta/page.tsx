@@ -39,6 +39,29 @@ export default function ConsultaPage() {
     }
   };
 
+  const renderSource = (source: any, idx: number) => {
+    if (typeof source === 'string') {
+      return (
+        <div key={idx} className="text-xs text-gray-600 bg-gray-50 p-3 rounded border-l-2 border-blue-300">
+          {source}
+        </div>
+      );
+    }
+    
+    return (
+      <div key={idx} className="text-xs text-gray-600 bg-gray-50 p-3 rounded border-l-2 border-blue-300">
+        <div className="font-semibold text-blue-700">{source.vaccine || 'N/A'}</div>
+        <div className="text-gray-500">{source.section || ''}</div>
+        {source.content_preview && (
+          <div className="mt-1 text-gray-600">{source.content_preview}</div>
+        )}
+        {source.source_file && (
+          <div className="mt-1 text-xs text-gray-400">Fuente: {source.source_file}</div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4 py-12 max-w-7xl">
@@ -118,11 +141,7 @@ export default function ConsultaPage() {
                         Fuentes consultadas ({response.sources.length})
                       </h3>
                       <div className="space-y-2">
-                        {response.sources.slice(0, 5).map((source: string, idx: number) => (
-                          <div key={idx} className="text-xs text-gray-600 bg-gray-50 p-3 rounded border-l-2 border-blue-300">
-                            {source}
-                          </div>
-                        ))}
+                        {response.sources.slice(0, 5).map((source: any, idx: number) => renderSource(source, idx))}
                       </div>
                     </div>
                   )}
