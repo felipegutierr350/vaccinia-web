@@ -8,7 +8,6 @@ import { MessageSquare, BookOpen, FileText, Sparkles } from "lucide-react";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-cyan-50 to-white">
-      {/* Hero Section */}
       <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-4 md:mb-6">
@@ -31,23 +30,17 @@ export default function Home() {
               </Button>
             </Link>
             <Link href="/comunicacion">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-cyan-600 text-base md:text-lg px-6 md:px-8 font-semibold"
-              >
+              <Button size="lg" className="w-full sm:w-auto bg-white text-cyan-600 hover:bg-cyan-50 text-base md:text-lg px-6 md:px-8 border-2 border-white">
                 <BookOpen className="mr-2 h-5 w-5" />
-                <span>Tips de Comunicación</span>
+                Tips de Comunicación
               </Button>
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Features Section */}
       <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
-          {/* Consulta IA */}
           <Link href="/consulta" className="block">
             <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-cyan-500">
               <CardHeader>
@@ -67,7 +60,6 @@ export default function Home() {
             </Card>
           </Link>
 
-          {/* Tips Comunicación */}
           <Link href="/comunicacion" className="block">
             <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-blue-500">
               <CardHeader>
@@ -87,7 +79,6 @@ export default function Home() {
             </Card>
           </Link>
 
-          {/* MIPRES */}
           <Link href="/mipres" className="block">
             <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-green-500">
               <CardHeader>
@@ -108,7 +99,6 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Info Section */}
         <div className="mt-8 md:mt-16 max-w-4xl mx-auto">
           <Card className="bg-gradient-to-r from-cyan-50 to-blue-50 border-cyan-200">
             <CardContent className="pt-6 px-4 md:px-6">
