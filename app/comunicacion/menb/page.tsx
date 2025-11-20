@@ -107,10 +107,10 @@ export default function MenBPage() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-        <div className="container mx-auto px-4 py-8 md:py-16">
+        <div className="container mx-auto px-4 py-12 md:py-16">
           <Link 
             href="/comunicacion" 
-            className="inline-flex items-center gap-2 text-white/90 hover:text-white mb-4 md:mb-6 text-sm md:text-base"
+            className="inline-flex items-center gap-2 text-white/90 hover:text-white mb-6"
           >
             <ArrowLeft size={20} />
             Volver a Comunicación
@@ -120,14 +120,14 @@ export default function MenBPage() {
             <Badge className="bg-white/20 backdrop-blur text-white border-white/30 mb-4">
               Meningococo B
             </Badge>
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Estrategias de Comunicación: Vacuna MenB
             </h1>
-            <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Cómo involucrar efectivamente a padres en la decisión de vacunación contra meningococo B
             </p>
             
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <StatCard 
                 number="17.5x" 
                 label="más efectivo lenguaje presuntivo"
@@ -149,12 +149,12 @@ export default function MenBPage() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-6 md:py-12 max-w-7xl">
+      <div className="container mx-auto px-4 py-12 max-w-7xl">
         
         {/* Mensajes Clave */}
-        <section className="mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Mensajes Clave para Comunicar</h2>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6">Mensajes Clave para Comunicar</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {mensajesClave.map((mensaje, idx) => (
               <MensajeClave key={idx} {...mensaje} />
             ))}
@@ -162,41 +162,41 @@ export default function MenBPage() {
         </section>
 
         {/* Método de 2 Pasos */}
-        <section className="mb-8 md:mb-12">
+        <section className="mb-12">
           <Card className="border-blue-200 bg-blue-50">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-lg md:text-xl">
-                <TrendingUp className="h-5 w-5 md:h-6 md:w-6 text-blue-600" />
+              <CardTitle className="flex items-center gap-2">
+                <TrendingUp className="h-6 w-6 text-blue-600" />
                 Método de 2 Pasos para Manejo de Resistencia
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="bg-white p-3 md:p-4 rounded-lg">
-                <h4 className="font-semibold text-sm md:text-base text-blue-900 mb-2">📍 PASO 1: Primera Resistencia</h4>
-                <p className="text-xs md:text-sm text-slate-700 mb-2">
+              <div className="bg-white p-4 rounded-lg">
+                <h4 className="font-semibold text-blue-900 mb-2">📍 PASO 1: Primera Resistencia</h4>
+                <p className="text-sm text-slate-700 mb-2">
                   <strong>Reconocer + Mantener recomendación:</strong>
                 </p>
-                <p className="text-xs md:text-sm text-slate-600 italic">
+                <p className="text-sm text-slate-600 italic">
                   &quot;Entiendo su preocupación. Aún así, recomiendo firmemente esta vacuna porque 
                   la enfermedad meningocócica, aunque rara, puede ser devastadora y ocurre en adolescentes 
                   sanos. No quiero que su hijo sea ese caso raro.&quot;
                 </p>
               </div>
               
-              <div className="bg-white p-3 md:p-4 rounded-lg">
-                <h4 className="font-semibold text-sm md:text-base text-blue-900 mb-2">📍 PASO 2: Si Persiste Resistencia</h4>
-                <p className="text-xs md:text-sm text-slate-700 mb-2">
+              <div className="bg-white p-4 rounded-lg">
+                <h4 className="font-semibold text-blue-900 mb-2">📍 PASO 2: Si Persiste Resistencia</h4>
+                <p className="text-sm text-slate-700 mb-2">
                   <strong>Repetir recomendación con NUEVA razón específica:</strong>
                 </p>
-                <p className="text-xs md:text-sm text-slate-600 italic">
+                <p className="text-sm text-slate-600 italic">
                   &quot;Entiendo que aún tiene dudas. Déjeme insistir una vez más: esta vacuna protege 
                   contra una enfermedad que puede matar en menos de 24 horas. He visto casos y las 
                   consecuencias son devastadoras. Realmente quiero que su hijo esté protegido.&quot;
                 </p>
               </div>
 
-              <div className="bg-green-50 p-3 md:p-4 rounded-lg border border-green-200">
-                <p className="text-xs md:text-sm text-green-900">
+              <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                <p className="text-sm text-green-900">
                   <strong>✅ Evidencia:</strong> 47% de padres que inicialmente rechazan MenB ACEPTAN 
                   cuando el médico repite la recomendación con una razón adicional. ¡No abandones la 
                   conversación después del primer &quot;no&quot;!
@@ -207,30 +207,30 @@ export default function MenBPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Preguntas Frecuentes de Padres</h2>
-          <p className="text-sm md:text-base text-slate-600 mb-6">
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">Preguntas Frecuentes de Padres</h2>
+          <p className="text-slate-600 mb-6">
             Respuestas basadas en evidencia a las objeciones más comunes
           </p>
           <FAQSection items={faqItems} />
         </section>
 
         {/* Ejemplos de Mensajes */}
-        <section className="mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ejemplos de Comunicación Efectiva</h2>
-          <p className="text-sm md:text-base text-slate-600 mb-6">
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">Ejemplos de Comunicación Efectiva</h2>
+          <p className="text-slate-600 mb-6">
             Scripts adaptables para diferentes situaciones clínicas
           </p>
           
           <Tabs defaultValue="inicial" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4">
-              <TabsTrigger value="inicial" className="text-xs md:text-sm">Recomendación</TabsTrigger>
-              <TabsTrigger value="resistencia" className="text-xs md:text-sm">Resistencia</TabsTrigger>
-              <TabsTrigger value="urgencia" className="text-xs md:text-sm">Urgencia</TabsTrigger>
-              <TabsTrigger value="efectos" className="text-xs md:text-sm">Efectos</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-4">
+              <TabsTrigger value="inicial">Recomendación</TabsTrigger>
+              <TabsTrigger value="resistencia">Resistencia</TabsTrigger>
+              <TabsTrigger value="urgencia">Urgencia</TabsTrigger>
+              <TabsTrigger value="efectos">Efectos</TabsTrigger>
             </TabsList>
             
-            <TabsContent value="inicial" className="space-y-4 mt-4">
+            <TabsContent value="inicial" className="space-y-4">
               <EjemploMensaje
                 titulo="Recomendación Inicial (Lenguaje Presuntivo)"
                 tipo="medico"
@@ -238,7 +238,7 @@ export default function MenBPage() {
               />
             </TabsContent>
 
-            <TabsContent value="resistencia" className="space-y-4 mt-4">
+            <TabsContent value="resistencia" className="space-y-4">
               <EjemploMensaje
                 titulo="Manejo de Resistencia - Paso 1"
                 tipo="respuesta"
@@ -251,7 +251,7 @@ export default function MenBPage() {
               />
             </TabsContent>
 
-            <TabsContent value="urgencia" className="space-y-4 mt-4">
+            <TabsContent value="urgencia" className="space-y-4">
               <EjemploMensaje
                 titulo="Enfatizar Severidad y Rapidez"
                 tipo="explicacion"
@@ -259,7 +259,7 @@ export default function MenBPage() {
               />
             </TabsContent>
 
-            <TabsContent value="efectos" className="space-y-4 mt-4">
+            <TabsContent value="efectos" className="space-y-4">
               <EjemploMensaje
                 titulo="Manejo de Preocupación por Efectos Secundarios"
                 tipo="respuesta"
@@ -270,40 +270,40 @@ export default function MenBPage() {
         </section>
 
         {/* Estrategias Adicionales */}
-        <section className="mb-8 md:mb-12">
+        <section className="mb-12">
           <Card className="border-cyan-200 bg-cyan-50">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-lg md:text-xl">
-                <Target className="h-5 w-5 md:h-6 md:w-6 text-cyan-600" />
+              <CardTitle className="flex items-center gap-2">
+                <Target className="h-6 w-6 text-cyan-600" />
                 Estrategias Adicionales para Aumentar Aceptación
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h4 className="font-semibold text-sm md:text-base mb-2">Usar Historias Reales (con Cuidado)</h4>
-                <p className="text-xs md:text-sm text-slate-700">
+                <h4 className="font-semibold mb-2">Usar Historias Reales (con Cuidado)</h4>
+                <p className="text-sm text-slate-700">
                   Si es apropiado: &quot;He visto/conocido casos de meningitis meningocócica y es algo que no 
                   quiero que ninguna familia experimente.&quot; Las historias personales tienen impacto, pero úsalas 
                   con sensibilidad.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-sm md:text-base mb-2">Enfatizar Timing Crítico</h4>
-                <p className="text-xs md:text-sm text-slate-700">
+                <h4 className="font-semibold mb-2">Enfatizar Timing Crítico</h4>
+                <p className="text-sm text-slate-700">
                   &quot;Toma 6 meses completar la serie de 2 dosis. Si esperamos hasta antes de universidad, 
                   puede que no tengamos protección completa cuando más la necesita.&quot;
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-sm md:text-base mb-2">Normalizar con Pares</h4>
-                <p className="text-xs md:text-sm text-slate-700">
+                <h4 className="font-semibold mb-2">Normalizar con Pares</h4>
+                <p className="text-sm text-slate-700">
                   &quot;Muchas universidades REQUIEREN esta vacuna. Es cada vez más estándar de cuidado 
                   para adolescentes.&quot;
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-sm md:text-base mb-2">Dar Opción de Informarse y Regresar</h4>
-                <p className="text-xs md:text-sm text-slate-700">
+                <h4 className="font-semibold mb-2">Dar Opción de Informarse y Regresar</h4>
+                <p className="text-sm text-slate-700">
                   Si hay resistencia fuerte después de 2 intentos: &quot;Entiendo que necesita más tiempo 
                   para pensarlo. Aquí tiene información de CDC [dar folleto]. ¿Podemos hablar nuevamente 
                   en la próxima visita en 2 semanas?&quot; Mantener la puerta abierta.
@@ -316,13 +316,13 @@ export default function MenBPage() {
         {/* Footer con Fuentes */}
         <Card className="bg-slate-50 border-slate-200">
           <CardContent className="pt-6">
-            <h3 className="font-semibold text-sm md:text-base mb-3">Fuentes Oficiales:</h3>
+            <h3 className="font-semibold mb-3">Fuentes Oficiales:</h3>
             <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-xs">CDC - Centers for Disease Control</Badge>
-              <Badge variant="secondary" className="text-xs">AAP - American Academy of Pediatrics</Badge>
-              <Badge variant="secondary" className="text-xs">ACIP - Advisory Committee on Immunization Practices</Badge>
-              <Badge variant="secondary" className="text-xs">Guía &quot;Conversación Abierta y Honesta&quot;</Badge>
-              <Badge variant="secondary" className="text-xs">Evidencia Lenguaje Presuntivo (Opel et al.)</Badge>
+              <Badge variant="secondary">CDC - Centers for Disease Control</Badge>
+              <Badge variant="secondary">AAP - American Academy of Pediatrics</Badge>
+              <Badge variant="secondary">ACIP - Advisory Committee on Immunization Practices</Badge>
+              <Badge variant="secondary">Guía &quot;Conversación Abierta y Honesta&quot;</Badge>
+              <Badge variant="secondary">Evidencia Lenguaje Presuntivo (Opel et al.)</Badge>
             </div>
             <p className="text-xs text-slate-500 mt-4">
               Última actualización: Noviembre 2024. Contenido basado en guías oficiales y evidencia publicada.
