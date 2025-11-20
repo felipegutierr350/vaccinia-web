@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, MessageSquare, FileText, Lightbulb, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { Home, MessageSquare, FileText, Lightbulb, ChevronDown, Menu } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,21 +10,25 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
   const isComunicacionActive = pathname.startsWith("/comunicacion");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-2xl">💉</span>
-            <span className="font-bold text-xl text-blue-600">VaccinIA</span>
+            <span className="font-bold text-lg md:text-xl text-blue-600">VaccinIA</span>
           </Link>
           
-          <div className="flex space-x-2">
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-2">
             <Link 
               href="/" 
               className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
@@ -116,6 +119,59 @@ export default function Navbar() {
               <FileText size={18} />
               <span>MIPRES</span>
             </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <DropdownMenu open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <Menu size={24} />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                <DropdownMenuItem asChild>
+                  <Link href="/" className="cursor-pointer">
+                    <Home size={16} className="mr-2" />
+                    Inicio
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/consulta" className="cursor-pointer">
+                    <MessageSquare size={16} className="mr-2" />
+                    Consulta
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/comunicacion" className="cursor-pointer">
+                    <Lightbulb size={16} className="mr-2" />
+                    Comunicación
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/comunicacion/vph" className="cursor-pointer pl-8">
+                    💜 VPH
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/comunicacion/menb" className="cursor-pointer pl-8">
+                    💙 Meningococo B
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/tips" className="cursor-pointer">
+                    <Lightbulb size={16} className="mr-2" />
+                    Tips
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/mipres" className="cursor-pointer">
+                    <FileText size={16} className="mr-2" />
+                    MIPRES
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </div>

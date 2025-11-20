@@ -78,19 +78,19 @@ export default function ComunicacionPage() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 py-8 md:py-16">
           <div className="max-w-4xl">
             <Badge className="bg-white/20 backdrop-blur text-white border-white/30 mb-4">
               VaccinIA - Comunicación Efectiva
             </Badge>
-            <h1 className="text-5xl font-bold mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">
               Estrategias de Comunicación por Vacuna
             </h1>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8">
               Guías basadas en evidencia para involucrar a padres y pacientes en decisiones de vacunación
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-4">
               <Card className="bg-white/10 backdrop-blur border-white/20">
                 <CardContent className="p-4">
                   <MessageSquare className="h-8 w-8 mb-2" />
@@ -118,15 +118,15 @@ export default function ComunicacionPage() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12 max-w-7xl">
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2">Guías por Vacuna</h2>
-          <p className="text-slate-600">
+      <div className="container mx-auto px-4 py-6 md:py-12 max-w-7xl">
+        <div className="mb-6 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">Guías por Vacuna</h2>
+          <p className="text-sm md:text-base text-slate-600">
             Selecciona una vacuna para ver estrategias específicas de comunicación
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
           {vacunas.map((vacuna) => (
             <Card 
               key={vacuna.id}
@@ -141,19 +141,19 @@ export default function ComunicacionPage() {
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <Syringe className="h-5 w-5 text-blue-600" />
-                    <CardTitle className="text-xl">{vacuna.nombre}</CardTitle>
+                    <CardTitle className="text-lg md:text-xl">{vacuna.nombre}</CardTitle>
                   </div>
                   {vacuna.disponible ? (
-                    <Badge className="bg-green-100 text-green-800">
+                    <Badge className="bg-green-100 text-green-800 text-xs">
                       Disponible
                     </Badge>
                   ) : (
-                    <Badge variant="secondary">
+                    <Badge variant="secondary" className="text-xs">
                       Próximamente
                     </Badge>
                   )}
                 </div>
-                <CardDescription className="text-base">
+                <CardDescription className="text-sm md:text-base">
                   {vacuna.descripcion}
                 </CardDescription>
               </CardHeader>
@@ -202,10 +202,10 @@ export default function ComunicacionPage() {
         </div>
 
         {/* Call to action */}
-        <Card className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 border-blue-200">
+        <Card className="mt-8 md:mt-12 bg-gradient-to-r from-blue-50 to-purple-50 border-blue-200">
           <CardContent className="pt-6 text-center">
-            <h3 className="text-2xl font-bold mb-2">¿Tienes una situación específica?</h3>
-            <p className="text-slate-600 mb-4">
+            <h3 className="text-xl md:text-2xl font-bold mb-2">¿Tienes una situación específica?</h3>
+            <p className="text-sm md:text-base text-slate-600 mb-4">
               Usa nuestra consulta de IA para obtener recomendaciones personalizadas
             </p>
             <Link href="/consulta">
@@ -218,14 +218,14 @@ export default function ComunicacionPage() {
         </Card>
 
         {/* Info adicional */}
-        <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+        <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4 md:p-6">
           <div className="flex items-start gap-3">
             <div className="text-2xl">💡</div>
             <div>
-              <h4 className="font-semibold text-yellow-900 mb-2">
+              <h4 className="font-semibold text-yellow-900 mb-2 text-sm md:text-base">
                 Sobre estas guías
               </h4>
-              <p className="text-sm text-yellow-800 leading-relaxed">
+              <p className="text-xs md:text-sm text-yellow-800 leading-relaxed">
                 Todas las estrategias están basadas en evidencia de fuentes oficiales: CDC, OMS, OPS, 
                 American Academy of Pediatrics, American Cancer Society, y Ministerios de Salud. 
                 Se actualizan regularmente para reflejar las mejores prácticas en comunicación efectiva 
