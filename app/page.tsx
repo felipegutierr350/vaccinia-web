@@ -31,9 +31,13 @@ export default function Home() {
               </Button>
             </Link>
             <Link href="/comunicacion">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white/10 text-base md:text-lg px-6 md:px-8">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-cyan-600 text-base md:text-lg px-6 md:px-8 font-semibold"
+              >
                 <BookOpen className="mr-2 h-5 w-5" />
-                Tips de Comunicación
+                <span>Tips de Comunicación</span>
               </Button>
             </Link>
           </div>
