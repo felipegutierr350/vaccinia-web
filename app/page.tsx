@@ -7,25 +7,25 @@ import { MessageSquare, BookOpen, FileText, Sparkles } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 md:py-20">
+      <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-4 md:mb-6">
             <Sparkles className="h-12 w-12 md:h-16 md:w-16" />
           </div>
-          <div className="text-sm md:text-base mb-3 md:mb-4 text-blue-100">
+          <div className="text-sm md:text-base mb-3 md:mb-4 text-cyan-100">
             🤖 Powered by AI + Guías Oficiales Colombia
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6">
             Recomendaciones de Vacunación Inteligentes
           </h1>
-          <p className="text-base md:text-xl max-w-3xl mx-auto mb-6 md:mb-8 text-blue-50 px-4">
+          <p className="text-base md:text-xl max-w-3xl mx-auto mb-6 md:mb-8 text-cyan-50 px-4">
             Sistema RAG basado en IA que combina guías del PAI Colombia, IDSA 2025, ACIP/CDC para brindarte recomendaciones precisas y actualizadas.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <Link href="/consulta">
-              <Button size="lg" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-blue-50 text-base md:text-lg px-6 md:px-8">
+              <Button size="lg" className="w-full sm:w-auto bg-white text-cyan-600 hover:bg-cyan-50 text-base md:text-lg px-6 md:px-8">
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Empezar Consulta
               </Button>
@@ -45,10 +45,10 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
           {/* Consulta IA */}
           <Link href="/consulta" className="block">
-            <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-blue-500">
+            <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-cyan-500">
               <CardHeader>
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                  <MessageSquare className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-cyan-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                  <MessageSquare className="h-6 w-6 md:h-8 md:w-8 text-cyan-600" />
                 </div>
                 <CardTitle className="text-lg md:text-xl">Consulta de IA</CardTitle>
                 <CardDescription className="text-sm md:text-base">
@@ -65,10 +65,10 @@ export default function Home() {
 
           {/* Tips Comunicación */}
           <Link href="/comunicacion" className="block">
-            <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-purple-500">
+            <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-blue-500">
               <CardHeader>
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                  <BookOpen className="h-6 w-6 md:h-8 md:w-8 text-purple-600" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                  <BookOpen className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
                 </div>
                 <CardTitle className="text-lg md:text-xl">Tips de Comunicación</CardTitle>
                 <CardDescription className="text-sm md:text-base">
@@ -106,7 +106,7 @@ export default function Home() {
 
         {/* Info Section */}
         <div className="mt-8 md:mt-16 max-w-4xl mx-auto">
-          <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-blue-200">
+          <Card className="bg-gradient-to-r from-cyan-50 to-blue-50 border-cyan-200">
             <CardContent className="pt-6 px-4 md:px-6">
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-center">
                 ¿Cómo funciona VaccinIA?
