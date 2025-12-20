@@ -49,6 +49,16 @@ export default function Navbar() {
               <span>Consulta</span>
             </Link>
             
+
+            <Link 
+              href="/influenza" 
+              className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
+                pathname === "/influenza" ? "bg-blue-50 text-blue-600" : "hover:bg-gray-50"
+              }`}
+            >
+              <span className="text-lg">🦠</span>
+              <span>Influenza</span>
+            </Link>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button 
@@ -140,6 +150,11 @@ export default function Navbar() {
                   <Link href="/consulta" className="cursor-pointer">
                     <MessageSquare size={16} className="mr-2" />
                     Consulta
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/influenza" className="cursor-pointer">
+                    🦠 Influenza
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
