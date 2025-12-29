@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://web-production-28995.up.railway.app';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://vaccinia-backend.onrender.com';
 
 export interface PatientProfile {
   age?: number;
